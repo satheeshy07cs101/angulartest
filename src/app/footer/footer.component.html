@@ -1,0 +1,46 @@
+  <!-- Footer -->
+  <footer class="w3-padding-64 w3-light-grey w3-small w3-center" id="footer">
+    <div class="w3-row-padding">
+      <div class="w3-col s4">
+        <h4>Check Out Order!</h4>
+        <p>Provide your name and contact! Hit Send.</p>
+        <form  (ngSubmit)="submit()" ngNativeValidate >
+          <p><input required class="w3-input w3-border" [(ngModel)]="username"  type="text" placeholder="Name" name="Name" ></p>
+          <p><input required class="w3-input w3-border" [(ngModel)]="usercontact" type="text" placeholder="Phone Number" name="contact" ></p>
+          
+          <p> <textarea readonly name="order" id="order" cols="30" rows="10" placeholder="your cart is empty!" >{{orderdetails}}</textarea>  </p>
+          <button type="submit"   class="w3-button w3-block w3-black">Send</button>
+        </form>
+      </div>
+
+      <div class="w3-col s4">
+        <h4>About</h4>
+        <p><a href="#">About us</a></p>        
+         
+       
+      </div>
+
+      <div class="w3-col s4 w3-justify">
+        <h4>Store</h4>
+        <p><i class="fa fa-fw fa-map-marker"></i> Sri Vignesa Organic Oil Store</p>
+        <p><i class="fa fa-fw fa-phone"></i> 99XXXXXX00</p>
+        <p><i class="fa fa-fw fa-envelope"></i> ex@mail.com</p>
+        <h4>We accept</h4>
+        <p><i class="fa fa-fw fa-cc-amex"></i> Google Pay</p>
+         
+      </div>
+    </div>
+  </footer>
+
+   <!-- Newsletter Modal -->
+ <div id="orderconfirmation"  class="w3-modal" [style] = "orderconfirmationstyle" >
+  <div class="w3-modal-content w3-animate-zoom" style="padding:32px">
+    <div class="w3-container w3-white w3-center">
+       
+      <h2 class="w3-wide">Order Confirmation</h2>
+      <p>We have recieved your order, expect a call from us Soon..</p>
+      
+      <button type="button" class="w3-button w3-padding-large w3-red w3-margin-bottom" (mousedown) ="canclepopup()" (clik)="canclepopup()">close</button>
+    </div>
+  </div>
+</div>

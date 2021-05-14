@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "hero.component.scss"
+    ],
+    "names": [],
+    "file": "hero.component.css"
+}
